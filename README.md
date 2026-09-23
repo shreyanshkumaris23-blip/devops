@@ -51,4 +51,3 @@ devops/
 
 ## 🔗 Reference Repository
 - Reference Source: [SunagP/DevOps-Lab](https://github.com/sunagP/DevOps-Lab)
-- Destination Repository: [shreyanshkumaris23-blip/devops](https://github.com/shreyanshkumaris23-blip/devops.git)
