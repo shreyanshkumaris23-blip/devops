@@ -1,6 +1,6 @@
 # 🚀 DevOps Lab Exercises
 
-Welcome to the **DevOps Lab Solutions Repository**! This repository contains hands-on implementations, container configurations, Kubernetes manifests, code samples, step-by-step guides, and **embedded process output screenshots** for the DevOps course lab series.
+Welcome to the **DevOps Lab Repository**!
 
 ---
 
