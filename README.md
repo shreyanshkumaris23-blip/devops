@@ -1,20 +1,20 @@
 # 🚀 DevOps Lab Exercises
 
-Welcome to the **DevOps Lab Solutions Repository**! This repository contains hands-on implementations, container configurations, Kubernetes manifests, code samples, step-by-step guides, and **embedded process output screenshots** for the DevOps course lab series.
+<!-- Welcome to the **DevOps Lab Solutions Repository**! This repository contains hands-on implementations, container configurations, Kubernetes manifests, code samples, step-by-step guides, and **embedded process output screenshots** for the DevOps course lab series. -->
+
+
+
+## 📌 Exercises :
+
+| Exercise | Title | 
+| :--- | :--- | 
+| **Exercise 1** | **Kubernetes Getting Started (Hello Pod)** | 
+| **Exercise 2** | **Deploy Flask App on Minikube** |
+| **Exercise 3** | **Scaling Flask App with ReplicaSets** |
+| **Exercise 4** | **Docker Networking (Multi-Container)** |
 
 ---
-
-## 📌 Exercises Included
-
-| Exercise | Title | Focus Area | Status | Link |
-| :--- | :--- | :--- | :---: | :--- |
-| **Exercise 1** | **Kubernetes Getting Started (Hello Pod)** | Pods, NodePort Services, Nginx Deployment | ✅ Completed | [View Exercise 1](Exercise-1/README.md) |
-| **Exercise 2** | **Deploy Flask App on Minikube** | Custom Docker Builds, Deployments, YAML | ✅ Completed | [View Exercise 2](Exercise-2/README.md) |
-| **Exercise 3** | **Scaling Flask App with ReplicaSets** | Flash Sale Simulation, Scaling, Self-Healing | ✅ Completed | [View Exercise 3](Exercise-3/README.md) |
-| **Exercise 4** | **Docker Networking (Multi-Container)** | Bridge Networks, Embedded DNS, Multi-Tier Microservices | ✅ Completed | [View Exercise 4](Exercise-4/README.md) |
-
----
-
+<!-- 
 ## 📁 Repository Directory Structure
 
 ```
@@ -45,8 +45,8 @@ devops/
     └── docker-compose.yml             # Multi-container orchestration compose file
 ```
 
----
-
+--- -->
+<!-- 
 ## 🛠️ Prerequisites & Tools Used
 
 - **Operating System**: Windows / Linux / macOS
@@ -56,7 +56,7 @@ devops/
 - **Programming Languages & Frameworks**: Python 3.8 / 3.9 / 3.11, Flask, Gunicorn
 - **Data Stores & Caching**: MySQL 8.x, Redis 7.x
 
----
+--- -->
 
 ## 🔗 Reference Repository
 - Reference Source: [SunagP/DevOps-Lab](https://github.com/SunagP/DevOps-Lab)
