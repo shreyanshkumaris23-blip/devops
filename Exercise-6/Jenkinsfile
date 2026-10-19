@@ -1,0 +1,66 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Pre-check Docker') {
+            steps {
+                sh 'docker version'
+            }
+        }
+
+        stage('Prepare Workspace') {
+            steps {
+                sh '''
+                    cp /lab/Dockerfile .
+                    cp /lab/delivery_metrics.py .
+                    test -f Dockerfile
+                    test -f delivery_metrics.py
+                '''
+            }
+        }
+
+        stage('Build Delivery Metrics Image') {
+            steps {
+                sh '''
+                    docker build -t delivery-metrics:${BUILD_NUMBER} .
+                    docker tag delivery-metrics:${BUILD_NUMBER} delivery-metrics:latest
+                '''
+            }
+        }
+
+        stage('Run Delivery Metrics') {
+            steps {
+                sh '''
+                    if docker ps -a --format '{{.Names}}' | grep -qx delivery_metrics; then
+                        docker rm -f delivery_metrics
+                    fi
+
+                    docker run -d --restart unless-stopped \
+                        --name delivery_metrics \
+                        -p 8000:8000 \
+                        delivery-metrics:${BUILD_NUMBER}
+
+                    for attempt in $(seq 1 15); do
+                        if docker exec delivery_metrics python -c \
+                            "from urllib.request import urlopen; urlopen('http://localhost:8000/metrics', timeout=2)"; then
+                            exit 0
+                        fi
+                        sleep 2
+                    done
+
+                    docker logs delivery_metrics
+                    exit 1
+                '''
+            }
+        }
+
+        stage('Verify Monitoring Services') {
+            steps {
+                sh '''
+                    test "$(docker inspect -f '{{.State.Running}}' prometheus)" = true
+                    test "$(docker inspect -f '{{.State.Running}}' grafana)" = true
+                '''
+            }
+        }
+    }
+}
