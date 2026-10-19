@@ -1,45 +1,20 @@
-# 🚀 DevOps Lab Exercises
+# DevOps Lab Exercises
 
-Welcome to the **DevOps Lab Repository**!
+This repository contains hands-on labs covering containers, Kubernetes, CI/CD, monitoring, and basic shell scripting. Each exercise is in its own directory; screenshots and configuration files are included where available.
 
-<!-- Welcome to the **DevOps Lab Solutions Repository**! This repository contains hands-on implementations, container configurations, Kubernetes manifests, code samples, step-by-step guides, and embedded process output screenshots for the DevOps course lab series. -->
+## Lab index
 
-## 📌 Exercises Included
+| Exercise | Lab | Topics and materials |
+| --- | --- | --- |
+| 1 | [Kubernetes: Hello Pod](Exercise-1/README.md) | Start Minikube, run an Nginx Pod, expose it with a NodePort Service, and test access. Includes a Pod/Service manifest and screenshots. |
+| 2 | [Deploy a Flask app on Minikube](Exercise-2/README.md) | Build a Flask image in Minikube's Docker environment and deploy it with a Kubernetes Deployment and NodePort Service. |
+| 3 | [Scale a Flask app with a ReplicaSet](Exercise-3/README.md) | Deploy and scale a flash-sale app, inspect Pod placement, and observe ReplicaSet self-healing. |
+| 4 | [Docker networking](Exercise-4/) | Build a Flask REST API and explore user-defined bridge networks, container connectivity, and service discovery. |
+| 5 | [AppArmor container security](Exercise-5/) | Run a Flask app with an AppArmor profile and test restricted actions. |
+| 6 | [Delivery monitoring and alerting](Exercise-6/) | Collect delivery metrics with Prometheus, define alert rules, and build/run the metrics service through Jenkins. |
+| 7 | [Jenkins setup](Exercise-7/) | Set up Jenkins in Docker and access its initial setup screen. Screenshots document the exercise. |
+| 8 | [Shell script and Git workflow](Exercise-8/) | Add a `hello-world.sh` script to a Git repository and push the change to GitHub. |
+| 9 | [Jenkins pipeline for a Python app](Exercise-9/) | Use a Jenkins pipeline to install dependencies, run unit tests, and stage the Flask app for deployment. |
+| 10 | [Kubernetes microservices](Exercise-10/) | Build and deploy product-catalog and shopping-cart Flask services with Kubernetes Deployments and Services. |
 
-| Exercise | Title | Focus Area | Status | Link |
-| :--- | :--- | :--- | :---: | :--- |
-| **Exercise 1** | **Kubernetes Getting Started (Hello Pod)** | Pods, NodePort Services, Nginx Deployment | ✅ Completed | [View Exercise 1](Exercise-1/README.md) |
-| **Exercise 2** | **Deploy Flask App on Minikube** | Custom Docker Builds, Deployments, YAML | ✅ Completed | [View Exercise 2](Exercise-2/README.md) |
-| **Exercise 3** | **Scaling Flask App with ReplicaSets** | Flash Sale Simulation, Scaling, Self-Healing | ✅ Completed | [View Exercise 3](Exercise-3/README.md) |
-| **Exercise 4** | **Docker Networking (Multi-Container)** | Bridge Networks, Embedded DNS, Multi-Tier Microservices | ✅ Completed | [View Exercise 4](Exercise-4/README.md) |
-| **Exercise 5** | **AppArmor Container Security** | Linux security profiles and restricted actions | Added | [View Exercise 5](Exercise-5/) |
-| **Exercise 6** | **Real-Time Operations Monitoring and Alerting** | Jenkins, Prometheus, delivery metrics | Added | [View Exercise 6](Exercise-6/) |
-| **Exercise 7** | **Exercise 7 materials** | Screenshots | Added | [View Exercise 7](Exercise-7/) |
-| **Exercise 8** | **Exercise 8 materials** | Shell scripting | Added | [View Exercise 8](Exercise-8/) |
-
----
-
-## 📁 Repository Directory Structure
-
-```
-devops/
-├── README.md
-├── Exercise-1/
-├── Exercise-2/
-├── Exercise-3/
-├── Exercise-4/
-│   ├── docker-networking-lab/
-│   ├── junk/
-│   ├── Dockerfile
-│   ├── app.py
-│   ├── requirements.txt
-│   └── screenshots/
-├── Exercise-5/
-├── Exercise-6/
-├── Exercise-7/
-└── Exercise-8/
-```
-
-## 🔗 Reference Repository
-- Reference Source: [SunagP/DevOps-Lab](https://github.com/SunagP/DevOps-Lab)
-- Destination Repository: [shreyanshkumaris23-blip/devops](https://github.com/shreyanshkumaris23-blip/devops.git)
+Exercises 1-3 include step-by-step exercise READMEs. The remaining exercise directories contain the lab code, configuration, and/or screenshots.
